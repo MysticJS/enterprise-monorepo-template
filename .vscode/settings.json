@@ -55,6 +55,6 @@
   ],
   // Enable tailwind validation linting
   "tailwindCSS.validate": true,
-  // dictionary
+  // Local Project Dictionary
   "cSpell.words": ["nofollow", "mysticjs"]
 }
