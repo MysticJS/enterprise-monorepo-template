@@ -1,0 +1,20 @@
+{
+  "name": "@mysticjs/icons",
+  "version": "1.0.0",
+  "description": "An SVG icon asset library for The MysticJS",
+  "private": false,
+  "scripts": {
+    "build": "",
+    "check:lint": "TIMING=1 eslint . --no-error-on-unmatched-pattern",
+    "fix:lint": "eslint .",
+    "test": "echo \"Bypassing: no test specified\" && exit 0"
+  },
+  "devDependencies": {
+    "@mysticjs/tsconfig": "workspace:*",
+    "eslint-config-mysticjs": "workspace:*",
+    "typescript": "5.1.6"
+  },
+  "volta": {
+    "extends": "../../package.json"
+  }
+}

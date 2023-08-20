@@ -1,0 +1,59 @@
+{
+  "name": "@mysticjs/ui",
+  "version": "1.0.0",
+  "description": "A modern UI library for The MysticJS",
+  "private": false,
+  "scripts": {
+    "check:lint": "TIMING=1 eslint . --no-error-on-unmatched-pattern",
+    "fix:lint": "eslint .",
+    "test": "echo \"Bypassing: no test specified\" && exit 0"
+  },
+  "dependencies": {
+    "@mysticjs/icons": "workspace:*",
+    "@mysticjs/kit": "workspace:*",
+    "@mysticjs/tokens": "workspace:*",
+    "@mysticjs/tsconfig": "workspace:*",
+    "cva": "npm:class-variance-authority@0.7.0",
+    "next": "^13.4.19",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+  },
+  "devDependencies": {
+    "@mysticjs/tsconfig": "workspace:*",
+    "@types/react": "18.2.20",
+    "@types/react-dom": "18.2.7",
+    "autoprefixer": "^10.4.15",
+    "cssnano": "^6.0.1",
+    "eslint-config-mysticjs": "workspace:*",
+    "postcss": "^8.4.28",
+    "tailwindcss": "^3.3.3",
+    "typescript": "5.1.6"
+  },
+  "exports": {
+    ".": "./src/components/index.ts",
+    "./package.json": "./package.json",
+    "./src/components/*": "./src/components/*",
+    "./postcss": "./postcss.config.cjs",
+    "./tailwind": "./tailwind.config.cjs",
+    "./design-system.css": "./css/design-system.css"
+  },
+  "typesVersions": {
+    "*": {
+      "index": [
+        "./src/components/index.ts"
+      ],
+      "postcss": [
+        "./postcss.config.cjs"
+      ],
+      "tailwind": [
+        "./tailwind.config.cjs"
+      ],
+      "src/components/*": [
+        "./src/components/*"
+      ],
+      "design-system.css": [
+        "./css/design-system.css"
+      ]
+    }
+  }
+}

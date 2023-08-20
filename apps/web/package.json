@@ -1,0 +1,44 @@
+{
+  "name": "@mysticjs/web",
+  "version": "1.0.0",
+  "description": "Frontend for the next-gen MysticJS web app",
+  "private": false,
+  "scripts": {
+    "build": "next build",
+    "check:lint": "TIMING=1 eslint .",
+    "check:types": "tsc --noEmit",
+    "dev": "next dev",
+    "dev:sync": "pnpm vercel:sync; pnpm dev",
+    "fix:lint": "eslint .",
+    "start": "next start",
+    "sync:env": "vercel env pull .env.local",
+    "test": "echo \"Bypassing: no test specified\" && exit 0",
+    "vercel:link": "vercel --scope the-mysticjs link --project web --yes"
+  },
+  "dependencies": {
+    "@mysticjs/icons": "workspace:*",
+    "@mysticjs/kit": "workspace:*",
+    "@mysticjs/tokens": "workspace:*",
+    "@mysticjs/ui": "workspace:*",
+    "@vercel/edge-config": "^0.2.1",
+    "jotai": "^2.3.1",
+    "next": "13.4.19",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-hook-form": "^7.45.4",
+    "react-query": "^3.39.3",
+    "zod": "^3.22.2"
+  },
+  "devDependencies": {
+    "@mysticjs/tsconfig": "workspace:*",
+    "@svgr/webpack": "^8.1.0",
+    "@types/node": "20.5.1",
+    "@types/react": "18.2.20",
+    "@types/react-dom": "18.2.7",
+    "autoprefixer": "^10.4.15",
+    "eslint-config-mysticjs": "workspace:*",
+    "postcss": "^8.4.28",
+    "tailwindcss": "^3.3.3",
+    "typescript": "5.1.6"
+  }
+}

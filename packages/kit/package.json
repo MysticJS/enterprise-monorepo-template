@@ -1,0 +1,44 @@
+{
+  "name": "@mysticjs/kit",
+  "version": "1.0.0",
+  "description": "A re-useable code-kit for The MysticJS",
+  "private": false,
+  "scripts": {
+    "build": "tsup --minify",
+    "dev:pre-build": "tsup --silent",
+    "check:lint": "TIMING=1 eslint . --no-error-on-unmatched-pattern",
+    "fix:lint": "eslint . --fix",
+    "test": "echo \"Bypassing: no test specified\" && exit 0"
+  },
+  "devDependencies": {
+    "@mysticjs/tsconfig": "workspace:*",
+    "@types/node": "20.5.1",
+    "@types/react": "18.2.20",
+    "@types/react-dom": "18.2.7",
+    "eslint-config-mysticjs": "workspace:*",
+    "tsup": "^7.2.0",
+    "typescript": "5.1.6"
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "exports": {
+    "./node": {
+      "import": "./src/node/index.ts",
+      "require": "./dist/node.js"
+    }
+  },
+  "typesVersions": {
+    "*": {
+      "node": [
+        "src/node/index.ts",
+        "dist/node.d.ts"
+      ]
+    }
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}

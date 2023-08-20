@@ -1,0 +1,62 @@
+{
+  "name": "mysticjs-monorepo-template",
+  "version": "0.0.0-root",
+  "private": false,
+  "license": "GNU",
+  "description": "",
+  "author": "Chris Hahn <chris@chrishahn.me>",
+  "repository": "https://github.com/the-mysticjs/enterprise-monorepo-template.git",
+  "keywords": [
+    "enterprise",
+    "template",
+    "typescript",
+    "nextjs",
+    "monorepo",
+    "web app",
+    "nx",
+    "next",
+    "vercel",
+    "pnpm",
+    "tailwind"
+  ],
+  "scripts": {
+    "check:format": "prettier --check '**/*.{js,ts,tsx,json,md,yaml,yml}'",
+    "check:lint": "turbo run check:lint --color",
+    "check:types": "turbo run check:types --color",
+    "clean:modules": "find . -name node_modules -type d -exec rm -rf {} +",
+    "clean:reset": "pnpm clean:modules; pnpm install",
+    "fix:format": "prettier --write '**/*.{js,ts,tsx,json,md,yaml,yml}'",
+    "in:eslint": "pnpm --filter eslint-config-mysticjs",
+    "in:admin": "pnpm --filter @mysticjs/admin",
+    "in:icons": "pnpm --filter @mysticjs/icons",
+    "in:kit": "pnpm --filter  @mysticjs/kit",
+    "in:tailwind": "pnpm --filter  @mysticjs/tailwind",
+    "in:tokens": "pnpm --filter @mysticjs/tokens",
+    "in:ui": "pnpm --filter @mysticjs/ui",
+    "in:web": "pnpm --filter @mysticjs/web",
+    "pre-commit": "lint-staged",
+    "preinstall": "npx only-allow pnpm",
+    "prepare": "husky install",
+    "test": "turbo run test --color",
+    "ui:build": "turbo run build --filter=@mysticjs/ui",
+    "web:dev": "turbo run dev --filter=@mysticjs/web",
+    "web:build": "turbo run build --filter=@mysticjs/web"
+  },
+  "dependencies": {
+    "turbo": "^1.10.12"
+  },
+  "devDependencies": {
+    "husky": "^8.0.3",
+    "lint-staged": "^14.0.0",
+    "prettier": "^3.0.2",
+    "prettier-plugin-tailwindcss": "^0.5.3",
+    "typescript": "5.1.6"
+  },
+  "engines": {
+    "node": ">=18.5.0",
+    "pnpm": ">=8.5.0",
+    "yarn": "must use pnpm",
+    "npm": "must use pnpm"
+  },
+  "packageManager": "pnpm@8.6.12"
+}
