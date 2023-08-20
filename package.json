@@ -3,7 +3,7 @@
   "version": "0.0.0-root",
   "private": false,
   "license": "GNU",
-  "description": "",
+  "description": "An opinionated monorepo template for building enterprise-grade Typescript applications with NextJS, Tailwind, and NX",
   "author": "Chris Hahn <chris@chrishahn.me>",
   "repository": "https://github.com/the-mysticjs/enterprise-monorepo-template.git",
   "keywords": [
